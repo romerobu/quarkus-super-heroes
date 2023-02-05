@@ -41,4 +41,4 @@ nb-configuration.xml
 **/deploy/k8s/gen
 
 # Notes
-notest.txt
+notes.txt
