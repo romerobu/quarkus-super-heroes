@@ -1,0 +1,19 @@
+"Quarkus is a stack to develop distributed systems and modern applications in Java, Kotlin, or Scala. Quarkus applications are tailored for the Cloud, containers, and Kubernetes. That does not mean you can’t use Quarkus in other environments, there are no limits, but the principles infused in Quarkus have made containerization of applications more efficient. "
+
+"In this workshop, you will develop an application that allows superheroes to fight against supervillains. You will be developing several microservices communicating either synchronously via REST or asynchronously using Kafka"
+
+
+Install java 17
+Docker must be running
+Install gitops operator, report portal and pipelines
+
+From root directory run: mvn clean Install
+
+
+Create project, deploy app there
+
+./mvnw clean package -DskipTests -Dquarkus.kubernetes.deploy=true -Dquarkus.kubernetes.deployment-target=openshift -Dquarkus.container-image.builder=openshift -Dquarkus.openshift.resources.limits.memory=2Gi -Dquarkus.openshift.resources.requests.memory=256Mi -Dquarkus.kubernetes-client.trust-certs=true
+
+Create postgress ephemeral there (console)
+
+Configure ArgoCD + Tekton
